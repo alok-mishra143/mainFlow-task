@@ -1,0 +1,277 @@
+/* Basic styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #0c020c;
+  color: #d097f1;
+}
+
+/* Header styles */
+.header-content {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.header-right ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.header-right ul li {
+  margin: 0 1rem;
+}
+
+.header-right ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+  color: #f8b400;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #3d1b2e;
+  border-radius: 8px;
+  color: #f493c8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section p {
+  margin-bottom: 0.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.service {
+  background-color: #411b3087;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.885);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.blog-post {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  margin-bottom: 1rem;
+}
+
+.blog-post h3 {
+  margin-top: 0;
+}
+
+.blog-post p {
+  margin: 0.5rem 0;
+}
+
+.blog-post a {
+  color: #f8b400;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(51, 27, 145, 0.589);
+}
+
+form label {
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  color: white;
+  background: transparent;
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #f8b400;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #333;
+}
+
+footer {
+  background-color: #0c020c;
+
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-style: none;
+  text-decoration: underline;
+  color: white;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Highlight active link */
+.header-right ul li.active a {
+  font-weight: bold;
+  color: #f8b400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+  }
+
+  .header-right ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .gallery img {
+    max-width: 100%;
+  }
+
+  form {
+    padding: 1rem;
+  }
+}
