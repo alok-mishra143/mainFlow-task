@@ -1,79 +1,123 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #000000;
-  color: white;
+  background-color: #121212; /* Darker background for contrast */
+  color: #ffffff; /* Slightly off-white for better readability */
 }
 
 .container {
   width: 400px;
-  height: 400px;
-  background: rgb(32, 1, 50);
+  min-height: 500px; /* Limit height and add scroll for overflow */
+  background: linear-gradient(
+    135deg,
+    #1f1f1f,
+    #2a2a2a
+  ); /* Gradient background for container */
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgb(252, 1, 1);
+  border-radius: 15px; /* Increased border-radius for smoother corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 h1 {
   margin: 0 0 20px 0;
   text-align: center;
+  font-size: 26px; /* Slightly larger font */
+  color: #e0e0e0; /* Light gray for better contrast */
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 #todo-input {
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  outline: none;
-
+  flex: 1;
+  padding: 12px;
+  margin-right: 10px;
+  border: 2px solid #555; /* Border for better input visibility */
   border-radius: 10px;
+  background: #2a2a2a; /* Darker input background */
+  color: white; /* Input text color */
+  transition: border 0.3s;
+}
+
+#todo-input:focus {
+  border-color: #28a745; /* Green border on focus */
 }
 
 #add-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  padding: 15px;
+  padding: 12px 20px;
   background: #28a745;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
 #add-button:hover {
   background: #218838;
+  transform: translateY(-2px); /* Slightly raise the button on hover */
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   width: 100%;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 15px; /* Increased padding for better spacing */
+  margin-bottom: 10px; /* Space between items */
+  border: 1px solid #444; /* Border around each item */
+  background: linear-gradient(
+    135deg,
+    #292929,
+    #3a3a3a
+  ); /* Gradient background for items */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px; /* Rounded corners for items */
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Transition effects */
 }
 
-li button {
+li:hover {
+  background: #333; /* Slightly lighter background on hover */
+  transform: translateY(-2px); /* Slight movement on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.task-text {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.delete-button {
   background: #dc3545;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   padding: 5px 10px;
+  transition: background 0.3s, transform 0.3s; /* Transition effects */
 }
 
-li button:hover {
+.delete-button:hover {
   background: #c82333;
+  transform: scale(1.1); /* Slightly larger button on hover */
 }
