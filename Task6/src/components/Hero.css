@@ -1,0 +1,30 @@
+/* Flex container for images */
+.cont {
+  z-index: 0;
+}
+.disimg {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Add some space between the images */
+}
+
+/* Image styling */
+.disimg img {
+  z-index: 0;
+  width: 300px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(45, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover effect for images */
+.disimg img:hover {
+  z-index: 0;
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  cursor: pointer; /* Change cursor to pointer */
+}
